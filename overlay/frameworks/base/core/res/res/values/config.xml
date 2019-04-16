@@ -237,7 +237,7 @@
         <item>3.5</item>
         <item>1000</item>
     </array>
-    
+
     <!-- The maximum range of gamma adjustment possible using the screen
          auto-brightness adjustment setting. -->
     <fraction name="config_autoBrightnessAdjustmentMaxGamma">100%</fraction>
@@ -268,6 +268,10 @@
         @see https://www.w3.org/TR/SVG/paths.html#PathData
         -->
     <string name="config_mainBuiltInDisplayCutout">M 0,0 H -31 V 80 H 31 V 0 H 0 Z</string>
+
+    <!-- The default peak refresh rate for a given device. Change this value if you want to allow
+         for higher refresh rates to be automatically used out of the box -->
+    <integer name="config_defaultPeakRefreshRate">120</integer>
 
     <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
          autodetected from the Configuration. -->
