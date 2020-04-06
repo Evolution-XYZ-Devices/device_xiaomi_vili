@@ -42,6 +42,9 @@
     <!-- Doze: does this device support STATE_DOZE_SUSPEND?  -->
     <bool name="doze_suspend_display_state_supported">false</bool>
 
+    <!-- Whether usage of the proximity sensor during doze is supported -->
+    <bool name="doze_proximity_sensor_supported">false</bool>
+
     <!-- Type of a sensor that provides a low-power estimate of the desired display
          brightness, suitable to listen to while the device is asleep (e.g. during
          always-on display) -->
