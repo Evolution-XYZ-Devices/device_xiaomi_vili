@@ -99,8 +99,7 @@ function blob_fixup() {
             mv "${EXTRACT_TMP_DIR}/${1##*/}" "${2}"
             ;;
         vendor/lib64/hw/camera.xiaomi.so)
-            hexdump -ve '1/1 "%.2X"' "${2}" | sed "s/5E070094881640F9/1F2003D5881640F9/g; s/AA060094881640F9/1F2003D5881640F9/g" | xxd -r -p > "${EXTRACT_TMP_DIR}/${1##*/}"
-            mv "${EXTRACT_TMP_DIR}/${1##*/}" "${2}"
+            "${SIGSCAN}" -p "4d 07 00 94" -P "1F 20 03 D5" -f "${2}"
             ;;
     esac
 }
