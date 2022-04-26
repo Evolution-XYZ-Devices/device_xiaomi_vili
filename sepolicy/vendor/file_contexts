@@ -22,6 +22,9 @@
 # Livedisplay
 /vendor/bin/hw/vendor\.lineage\.livedisplay@2\.1-service\.xiaomi_sm8350                                      u:object_r:hal_lineage_livedisplay_qti_exec:s0
 
+# Media
+/vendor/bin/hw/dolbycodec2			 u:object_r:mediacodec_exec:s0
+
 # Mlipay
 /(vendor|system/vendor)/bin/mlipayd@1.1          u:object_r:hal_mlipay_default_exec:s0
 
