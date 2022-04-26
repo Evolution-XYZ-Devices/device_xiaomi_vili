@@ -13,6 +13,9 @@ debug.cpurend.vsync=false
 
 # Display
 debug.force_no_blanking=true
+debug.hwui.renderer=skiagl
+debug.renderengine.backend=skiaglthreaded
+renderthread.skia.reduceopstasksplitting=true
 
 # Graphics
 debug.sf.disable_backpressure=1
