@@ -2,9 +2,6 @@
 persist.vendor.btstack.enable.lpa=true
 vendor.bluetooth.soc=hastings
 
-# Camera
-vendor.camera.aux.packagelist=com.android.camera,com.google.camera,org.lineageos.aperture,org.lineageos.aperture.dev
-
 # Charger
 ro.charger.enable_suspend=true
 
