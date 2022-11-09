@@ -110,6 +110,14 @@ BOARD_KERNEL_CMDLINE += ip6table_raw.raw_before_defrag=1
 BOARD_KERNEL_CMDLINE += firmware_class.path=/vendor/firmware
 BOARD_KERNEL_CMDLINE += kpti=off
 
+# Kernel modules
+BOOT_KERNEL_MODULES := \
+  fts_touch_spi.ko \
+  hwid.ko \
+  xiaomi_touch.ko
+
+BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(BOOT_KERNEL_MODULES)
+
 # LiveDisplay
 ifneq ("$(wildcard hardware/lineage/livedisplay)", "")
 SOONG_CONFIG_NAMESPACES += livedisplay
