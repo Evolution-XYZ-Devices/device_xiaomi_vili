@@ -117,9 +117,7 @@ BOARD_KERNEL_CMDLINE += kpti=off
 
 # Kernel modules
 BOOT_KERNEL_MODULES := \
-  fts_touch_spi.ko \
-  hwid.ko \
-  xiaomi_touch.ko
+  hwid.ko
 
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load))
 BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(BOOT_KERNEL_MODULES)
