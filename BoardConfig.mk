@@ -66,6 +66,9 @@ SOONG_CONFIG_dolby_vision_enabled := true
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 
+# Firmware
+-include vendor/xiaomi/vili-firmware/BoardConfigVendor.mk
+
 # GPS
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
 LOC_HIDL_VERSION := 4.0
