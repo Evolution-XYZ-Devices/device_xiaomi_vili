@@ -11,6 +11,9 @@ persist.vendor.cne.feature=1
 # Disable vsync for cpu rendered apps
 debug.cpurend.vsync=false
 
+# Display
+debug.force_no_blanking=true
+
 # Graphics
 debug.sf.disable_backpressure=1
 debug.sf.enable_hwc_vds=1
