@@ -137,6 +137,8 @@ on boot
     chown system system /dev/xiaomi-touch
     chmod 0660 /dev/xiaomi-touch
 
+    write /sys/class/touch/touch_dev/bump_sample_rate 1
+
     write /dev/cpuset/audio-app/cpus 1-2
 
     chown system /sys/devices/system/cpu/hyp_core_ctl/enable
