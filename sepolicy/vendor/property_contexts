@@ -18,6 +18,7 @@ persist.vendor.goodix.        u:object_r:vendor_fp_prop:s0
 ro.hardware.fp.               u:object_r:vendor_fp_prop:s0
 vendor.fps_hal.               u:object_r:vendor_fp_prop:s0
 ro.hardware.fp                u:object_r:vendor_fp_prop:s0
+vendor.panel.display          u:object_r:vendor_fp_prop:s0
 
 # Mlipay
 persist.vendor.sys.pay.                 u:object_r:vendor_mlipay_prop:s0
