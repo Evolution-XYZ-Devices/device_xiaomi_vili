@@ -67,10 +67,6 @@ function blob_fixup() {
         system_ext/lib64/libwfdnative.so)
             "${PATCHELF}" --remove-needed "android.hidl.base@1.0.so" "${2}"
             ;;
-        vendor/etc/camera/pureShot_parameter.xml \
-        |vendor/etc/camera/pureView_parameter.xml)
-            sed -i 's/=\([0-9]\+\)>/="\1">/g' "${2}"
-            ;;
         vendor/etc/vintf/manifest/c2_manifest_vendor.xml)
             sed -ni '/ozoaudio/!p' "${2}"
             ;;
@@ -84,9 +80,6 @@ function blob_fixup() {
         vendor/lib/libcodec2_vndk.stock.so)
             patchelf --set-soname libcodec2_vndk.stock.so "${2}"
             ;;
-        vendor/lib64/hw/camera.qcom.so)
-            sed -i "s/\x73\x74\x5F\x6C\x69\x63\x65\x6E\x73\x65\x2E\x6C\x69\x63/\x63\x61\x6D\x65\x72\x61\x5F\x63\x6E\x66\x2E\x74\x78\x74/g" "${2}"
-            ;;
         vendor/etc/camera/star_motiontuning.xml|vendor/etc/camera/mars_motiontuning.xml|vendor/etc/camera/vili_motiontuning.xml)
             sed -i 's/xml=version/xml\ version/g' "${2}"
 	    ;;
@@ -97,9 +90,6 @@ function blob_fixup() {
         vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so)
             hexdump -ve '1/1 "%.2X"' "${2}" | sed "s/8D0A0094AE1640F9/1F2003D5AE1640F9/g" | xxd -r -p > "${EXTRACT_TMP_DIR}/${1##*/}"
             mv "${EXTRACT_TMP_DIR}/${1##*/}" "${2}"
-            ;;
-        vendor/lib64/hw/camera.xiaomi.so)
-            "${SIGSCAN}" -p "4d 07 00 94" -P "1F 20 03 D5" -f "${2}"
             ;;
     esac
 }
