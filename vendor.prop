@@ -248,6 +248,9 @@ debug.stagefright.omx_default_rank=0
 media.stagefright.thumbnail.prefer_hw_codecs=true
 ro.config.vc_call_vol_steps=7
 
+# Multi-Gen LRU
+persist.device_config.mglru_native.lru_gen_config=all
+
 # NFC
 ro.vendor.nfc.repair=1
 ro.vendor.se.type=eSE,HCE,UICC
