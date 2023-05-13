@@ -4,6 +4,7 @@ vendor.bluetooth.soc=hastings
 
 # Camera
 vendor.camera.aux.packagelist=org.lineageos.aperture,com.android.camera
+persist.vendor.camera.privapp.list=com.android.camera
 
 # Charger
 ro.charger.enable_suspend=true
