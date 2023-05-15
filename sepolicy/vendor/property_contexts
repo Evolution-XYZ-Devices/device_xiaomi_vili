@@ -1,6 +1,6 @@
 # Camera
-vendor.camera.sensor.    u:object_r:vendor_camera_sensor_prop:s0
-ro.boot.camera.config    u:object_r:vendor_camera_sensor_prop:s0
+vendor.camera.sensor.     u:object_r:vendor_camera_sensor_prop:s0
+ro.boot.camera.config     u:object_r:vendor_camera_sensor_prop:s0
 persist.camera.           u:object_r:vendor_camera_prop:s0
 persist.vendor.low.cutoff u:object_r:vendor_camera_prop:s0
 
@@ -15,6 +15,7 @@ persist.vendor.fpc.           u:object_r:vendor_fp_prop:s0
 persist.vendor.goodix.        u:object_r:vendor_fp_prop:s0
 ro.hardware.fp.               u:object_r:vendor_fp_prop:s0
 vendor.fps_hal.               u:object_r:vendor_fp_prop:s0
+ro.hardware.fp                u:object_r:vendor_fp_prop:s0
 
 # Mlipay
 persist.vendor.sys.pay.                 u:object_r:vendor_mlipay_prop:s0
