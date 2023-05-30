@@ -1,0 +1,2 @@
+# Hardware
+ro.hardware.chipname      u:object_r:build_prop:s0
