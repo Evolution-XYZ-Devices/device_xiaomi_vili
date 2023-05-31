@@ -35,6 +35,7 @@ persist.log.tag.CamX=S
 persist.log.tag.SYNX-UMD=S
 persist.log.tag.CHIUSECASE=S
 persist.log.tag.ResourcesCompat=S
+persist.log.tag.FastChargingPreferenceController=S
 
 # Media
 media.aac_51_output_enabled=true
