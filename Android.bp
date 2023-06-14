@@ -6,3 +6,7 @@ soong_namespace {
         "hardware/google/pixel",
     ],
 }
+
+cc_library_shared {
+    name: "libldacBT_bco",
+}
