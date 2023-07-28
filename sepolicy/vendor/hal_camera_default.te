@@ -20,7 +20,9 @@ allow hal_camera_client vendor_hal_cameraperf_hwservice:hwservice_manager find;
 allow hal_camera_client vendor_hal_camerapostproc_xiaomi_hwservice:hwservice_manager find;
 
 # Allow to access proc/stat
-allow hal_camera_default proc_stat:file read;
+allow hal_camera_default proc_stat:file { open read };
 
 # Allow Camera to access system_server
 allow hal_camera_default system_server:binder { call transfer };
+
+set_prop(hal_camera_default, vendor_camera_prop)
