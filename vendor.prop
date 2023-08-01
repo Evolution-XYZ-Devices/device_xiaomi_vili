@@ -138,6 +138,7 @@ bluetooth.profile.opp.enabled?=true
 bluetooth.profile.pan.nap.enabled?=true
 bluetooth.profile.pan.panu.enabled?=true
 bluetooth.profile.pbap.server.enabled?=true
+bluetooth.profile.sap.server.enabled?=true
 persist.bluetooth.a2dp_offload.disabled=false
 persist.vendor.bt.aac_frm_ctl.enabled=true
 persist.vendor.bt.aac_vbr_frm_ctl.enabled=true
@@ -163,12 +164,6 @@ ro.soc.model=SM8350
 ro.crypto.dm_default_key.options_format.version=2
 ro.crypto.volume.metadata.method=dm-default-key
 
-# Dalvik dex2oat
-dalvik.vm.dex2oat64.enabled=true
-
-# Display
-debug.sf.latch_unsignaled=0
-
 # Dolby
 vendor.audio.dolby.ds2.enabled=false
 vendor.audio.dolby.ds2.hardbypass=false
@@ -184,6 +179,9 @@ persist.vendor.dpm.idletimer.mode=default
 persist.vendor.dpm.nsrm.bkg.evt=3955
 persist.vendor.dpmhalservice.enable=1
 
+# FRP
+ro.frp.pst=/dev/block/bootdevice/by-name/frp
+
 # Gatekeeper
 vendor.gatekeeper.disable_spu=true
 
@@ -193,20 +191,17 @@ debug.mdpcomp.logs=0
 debug.sf.disable_client_composition_cache=1
 debug.sf.enable_advanced_sf_phase_offset=1
 debug.sf.enable_gl_backpressure=1
-debug.sf.enable_transaction_tracing=false
-debug.sf.high_fps_early_gl_phase_offset_ns=-2000000
+debug.sf.high_fps_early_gl_phase_offset_ns=-4000000
 debug.sf.high_fps_early_phase_offset_ns=-4000000
 debug.sf.high_fps_late_app_phase_offset_ns=1000000
-debug.sf.high_fps_late_sf_phase_offset_ns=-2000000
+debug.sf.high_fps_late_sf_phase_offset_ns=-4000000
 debug.sf.hw=0
+debug.sf.latch_unsignaled=1
 debug.sf.set_idle_timer_ms=1000
-debug.sf.treat_170m_as_sRGB=1
 persist.sys.sf.color_mode=9
 persist.sys.sf.color_saturation=1.0
 persist.sys.sf.native_mode=258
 persist.vendor.disable_idle_fps.threshold=653
-ro.config.avoid_gfx_accel=true
-debug.sf.predict_hwc_composition_strategy=0
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
 ro.opengles.version=196610
@@ -217,8 +212,8 @@ ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 ro.surface_flinger.max_virtual_display_dimension=4096
 ro.surface_flinger.protected_contents=true
 ro.surface_flinger.set_touch_timer_ms=200
-ro.surface_flinger.set_display_power_timer_ms?=1000
-ro.surface_flinger.set_idle_timer_ms?=350
+ro.surface_flinger.set_display_power_timer_ms=1000
+ro.surface_flinger.set_idle_timer_ms=350
 ro.surface_flinger.use_color_management=true
 ro.surface_flinger.use_content_detection_for_refresh_rate=true
 ro.surface_flinger.wcg_composition_dataspace=143261696
@@ -251,7 +246,7 @@ ro.vendor.se.type=eSE,HCE,UICC
 
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
-ro.vendor.perf.scroll_opt=true
+ro.vendor.perf.scroll_opt=0
 
 # Radio
 keyguard.no_require_sim=true
