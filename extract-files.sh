@@ -60,15 +60,12 @@ fi
 
 function blob_fixup() {
     case "${1}" in
-        vendor/bin/hw/dolbycodec2)
-            patchelf --replace-needed libavservices_minijail_vendor.so libavservices_minijail.so "${2}"
-            patchelf --replace-needed libcodec2_hidl@1.0.so libcodec2_hidl@1.0.stock.so "${2}"
-            ;;
         system_ext/lib64/libwfdnative.so)
             "${PATCHELF}" --remove-needed "android.hidl.base@1.0.so" "${2}"
             ;;
-        vendor/lib64/android.hardware.secure_element@1.0-impl.so)
-            "${PATCHELF}" --remove-needed "android.hidl.base@1.0.so" "${2}"
+        vendor/bin/hw/dolbycodec2)
+            patchelf --replace-needed libavservices_minijail_vendor.so libavservices_minijail.so "${2}"
+            patchelf --replace-needed libcodec2_hidl@1.0.so libcodec2_hidl@1.0.stock.so "${2}"
             ;;
         vendor/lib/libcodec2_hidl@1.0.stock.so)
             patchelf --set-soname libcodec2_hidl@1.0.stock.so "${2}"
@@ -77,15 +74,18 @@ function blob_fixup() {
         vendor/lib/libcodec2_vndk.stock.so)
             patchelf --set-soname libcodec2_vndk.stock.so "${2}"
             ;;
-        vendor/etc/camera/star_motiontuning.xml|vendor/etc/camera/mars_motiontuning.xml|vendor/etc/camera/vili_motiontuning.xml)
+        vendor/lib64/android.hardware.secure_element@1.0-impl.so)
+            "${PATCHELF}" --remove-needed "android.hidl.base@1.0.so" "${2}"
+            ;;
+        vendor/etc/camera/vili_motiontuning.xml)
             sed -i 's/xml=version/xml\ version/g' "${2}"
 	    ;;
-        vendor/lib64/vendor.xiaomi.hardware.cameraperf@1.0-impl.so)
-            hexdump -ve '1/1 "%.2X"' "${2}" | sed "s/7C000094881640F9/1F2003D5881640F9/g" | xxd -r -p > "${EXTRACT_TMP_DIR}/${1##*/}"
-            mv "${EXTRACT_TMP_DIR}/${1##*/}" "${2}"
-            ;;
         vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so)
             hexdump -ve '1/1 "%.2X"' "${2}" | sed "s/8D0A0094AE1640F9/1F2003D5AE1640F9/g" | xxd -r -p > "${EXTRACT_TMP_DIR}/${1##*/}"
+            mv "${EXTRACT_TMP_DIR}/${1##*/}" "${2}"
+            ;;
+        vendor/lib64/vendor.xiaomi.hardware.cameraperf@1.0-impl.so)
+            hexdump -ve '1/1 "%.2X"' "${2}" | sed "s/7C000094881640F9/1F2003D5881640F9/g" | xxd -r -p > "${EXTRACT_TMP_DIR}/${1##*/}"
             mv "${EXTRACT_TMP_DIR}/${1##*/}" "${2}"
             ;;
     esac

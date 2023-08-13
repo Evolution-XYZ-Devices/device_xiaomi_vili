@@ -24,5 +24,3 @@ allow hal_camera_default proc_stat:file { open read };
 
 # Allow Camera to access system_server
 allow hal_camera_default system_server:binder { call transfer };
-
-set_prop(hal_camera_default, vendor_camera_prop)

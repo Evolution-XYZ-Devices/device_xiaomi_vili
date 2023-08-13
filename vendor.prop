@@ -154,7 +154,6 @@ ro.bluetooth.a2dp_offload.supported=true
 # Camera
 camera.disable_zsl_mode=true
 ro.hardware.camera=xiaomi
-vendor.camera.hal1.packagelist=com.whatsapp,com.whatsapp.w4b,com.facebook.orca,com.instagram.android
 
 # Chipset
 ro.soc.manufacturer=QTI
@@ -239,6 +238,7 @@ vendor.gralloc.disable_ubwc=0
 debug.stagefright.ccodec=4
 debug.stagefright.omx_default_rank=0
 media.stagefright.thumbnail.prefer_hw_codecs=true
+ro.config.vc_call_vol_steps=7
 
 # NFC
 ro.vendor.nfc.repair=1
@@ -251,7 +251,6 @@ ro.vendor.perf.scroll_opt=0
 # Radio
 keyguard.no_require_sim=true
 persist.radio.multisim.config=dsds
-persist.sys.radio.force_lte_ca=true
 persist.vendor.data.iwlan.enable=true
 persist.vendor.data.mode=concurrent
 persist.vendor.radio.apm_sim_not_pwdn=1
