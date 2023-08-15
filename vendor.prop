@@ -303,7 +303,5 @@ vendor.usb.use_gadget_hal=0
 # Wifi
 wifi.aware.interface=wifi-aware0
 
-persist.vendor.console.silent.config=1 
-
 # Zygote
 zygote.critical_window.minute=10
