@@ -33,16 +33,6 @@ vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so
 vendor/lib/libbluetooth_audio_session_qti.so
 vendor/lib/libbluetooth_audio_session_qti_2_1.so
 
-# Bluetooth (LDAC & LHDC)
-system/system/lib/libldacBT_abr.so
-system/system/lib/libldacBT_enc.so
-system/system/lib/liblhdcBT_enc.so
-system/system/lib/liblhdc.so
-system/system/lib64/libldacBT_abr.so
-system/system/lib64/libldacBT_enc.so
-system/system/lib64/liblhdcBT_enc.so
-system/system/lib64/liblhdc.so
-
 # CAcert
 vendor/app/CACertService/CACertService.apk
 vendor/lib64/libcacertclient.so
