@@ -134,6 +134,9 @@ endif
 # MIUI Camera (Leica)
 -include vendor/xiaomi/vili-miuicamera/products/board.mk
 
+# OTA Assert
+TARGET_OTA_ASSERT_DEVICE := vili
+
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_DTBOIMG_PARTITION_SIZE := 25165824
