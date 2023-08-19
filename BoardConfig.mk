@@ -131,6 +131,9 @@ DEVICE_MANIFEST_FILE += \
     $(DEVICE_PATH)/hidl/manifest_lineage.xml
 endif
 
+# MIUI Camera (Leica)
+-include vendor/xiaomi/vili-miuicamera/products/board.mk
+
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_BOOTIMAGE_PARTITION_SIZE := 201326592
