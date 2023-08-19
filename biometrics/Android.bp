@@ -1,9 +1,9 @@
 cc_binary {
-    name: "android.hardware.biometrics.fingerprint@2.3-service.xiaomi_vili",
+    name: "android.hardware.biometrics.fingerprint@2.3-service.vili",
     defaults: ["hidl_defaults"],
     relative_install_path: "hw",
-    init_rc: ["android.hardware.biometrics.fingerprint@2.3-service.xiaomi_vili.rc"],
-    vintf_fragments: ["android.hardware.biometrics.fingerprint@2.3-service.xiaomi_vili.xml"],
+    init_rc: ["android.hardware.biometrics.fingerprint@2.3-service.vili.rc"],
+    vintf_fragments: ["android.hardware.biometrics.fingerprint@2.3-service.vili.xml"],
     srcs: [
         "BiometricsFingerprint.cpp",
         "service.cpp",

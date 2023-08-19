@@ -40,9 +40,9 @@ livedisplay_cc_defaults {
 }
 
 cc_binary {
-    name: "vendor.lineage.livedisplay@2.1-service.xiaomi_sm8350",
-    vintf_fragments: ["vendor.lineage.livedisplay@2.1-service.xiaomi_sm8350.xml"],
-    init_rc: ["vendor.lineage.livedisplay@2.1-service.xiaomi_sm8350.rc"],
+    name: "vendor.lineage.livedisplay@2.1-service.vili",
+    vintf_fragments: ["vendor.lineage.livedisplay@2.1-service.vili.xml"],
+    init_rc: ["vendor.lineage.livedisplay@2.1-service.vili.rc"],
     defaults: ["hidl_defaults", "livedisplay_defaults"],
     relative_install_path: "hw",
     srcs: [

@@ -18,7 +18,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_ven
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 # Inherit proprietary targets
-$(call inherit-product, vendor/xiaomi/sm8350-common/sm8350-common-vendor.mk)
+$(call inherit-product, vendor/xiaomi/vili/vili-vendor.mk)
 
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
@@ -196,7 +196,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.3-service.xiaomi_vili \
+    android.hardware.biometrics.fingerprint@2.3-service.vili \
     vendor.xiaomi.hardware.fingerprintextension@1.0.vendor
 
 PRODUCT_COPY_FILES += \
@@ -313,7 +313,7 @@ ifneq ("$(wildcard hardware/lineage/livedisplay)", "")
 # LiveDisplay
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service-sdm \
-    vendor.lineage.livedisplay@2.1-service.xiaomi_sm8350
+    vendor.lineage.livedisplay@2.1-service.vili
 endif
 
 # Media

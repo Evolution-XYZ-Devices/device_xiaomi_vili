@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.hardware.biometrics.fingerprint@2.3-service.xiaomi_vili"
+#define LOG_TAG "android.hardware.biometrics.fingerprint@2.3-service.vili"
 
 #include <android/log.h>
 #include <hidl/HidlSupport.h>
