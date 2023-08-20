@@ -723,7 +723,4 @@
 
     <!-- True if the device supports Sustained Performance Mode-->
     <bool name="config_sustainedPerformanceModeSupported">true</bool>
-
-    <!-- Boost Framework -->
-    <bool name="config_supportsBoostFramework">true</bool>
 </resources>
