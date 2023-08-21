@@ -95,7 +95,7 @@ BOARD_BOOT_HEADER_VERSION := 3
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 
 TARGET_KERNEL_ADDITIONAL_FLAGS := TARGET_PRODUCT=$(PRODUCT_DEVICE)
-TARGET_KERNEL_SOURCE := kernel/xiaomi/vili
+TARGET_KERNEL_SOURCE := kernel/xiaomi/sm8350
 TARGET_KERNEL_CONFIG := vendor/lahaina-qgki_defconfig vendor/debugfs.config vendor/xiaomi_QGKI.config
 TARGET_KERNEL_CONFIG += vendor/vili_QGKI.config
 
