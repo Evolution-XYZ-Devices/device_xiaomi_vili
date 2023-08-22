@@ -38,12 +38,13 @@ persist.dbg.wfc_avail_ovr=1
 ro.config.low_ram=false
 
 # Log
+persist.log.tag.ACDB-LOADER=S
 persist.log.tag.CVP=S
 persist.log.tag.CamX=S
-persist.log.tag.SYNX-UMD=S
 persist.log.tag.CHIUSECASE=S
-persist.log.tag.ResourcesCompat=S
 persist.log.tag.FastChargingPreferenceController=S
+persist.log.tag.ResourcesCompat=S
+persist.log.tag.SYNX-UMD=S
 
 # Media
 media.aac_51_output_enabled=true
