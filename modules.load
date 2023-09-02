@@ -88,3 +88,4 @@ wsa_macro_dlkm.ko
 wsa883x_dlkm.ko
 xc4000.ko
 xc5000.ko
+xiaomifp.ko
