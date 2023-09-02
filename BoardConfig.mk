@@ -122,15 +122,6 @@ BOOT_KERNEL_MODULES := \
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load))
 BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(BOOT_KERNEL_MODULES)
 
-# LiveDisplay
-ifneq ("$(wildcard hardware/lineage/livedisplay)", "")
-SOONG_CONFIG_NAMESPACES += livedisplay
-SOONG_CONFIG_livedisplay += enabled
-SOONG_CONFIG_livedisplay_enabled := true
-DEVICE_MANIFEST_FILE += \
-    $(DEVICE_PATH)/hidl/manifest_lineage.xml
-endif
-
 # MIUI Camera (Leica)
 -include vendor/xiaomi/vili-miuicamera/products/board.mk
 

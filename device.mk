@@ -323,13 +323,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libgui_vendor
 
-ifneq ("$(wildcard hardware/lineage/livedisplay)", "")
-# LiveDisplay
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service-sdm \
-    vendor.lineage.livedisplay@2.1-service.vili
-endif
-
 # Media
 PRODUCT_PACKAGES += \
     libmm-omxcore \

@@ -57,9 +57,6 @@
 # Label discard_max_bytes in /data partition
 /sys/devices/platform/soc/1d84000.ufshc/host0/target0:0:0/0:0:0:0/block/sda/queue/discard_max_bytes     u:object_r:vendor_sysfs_mmc_host:s0
 
-# Livedisplay
-/vendor/bin/hw/vendor\.lineage\.livedisplay@2\.1-service\.vili                                          u:object_r:hal_lineage_livedisplay_qti_exec:s0
-
 # Media
 /vendor/bin/hw/dolbycodec2			             u:object_r:mediacodec_exec:s0
 
